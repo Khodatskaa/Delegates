@@ -6,21 +6,26 @@ using System.Threading.Tasks;
 
 namespace Delegates
 {
-    public class ArithmeticOperations
+    public enum ArithmeticOperation
     {
-        // check if a number is even
+        Even,
+        Odd,
+        Prime,
+        Fibonacci
+    }
+
+    public static class ArithmeticOperations
+    {
         public static bool IsEven(int number)
         {
             return number % 2 == 0;
         }
 
-        // Predicate to check if a number is odd
         public static bool IsOdd(int number)
         {
             return number % 2 != 0;
         }
 
-        // check if a number is prime
         public static bool IsPrime(int number)
         {
             if (number <= 1)
@@ -40,7 +45,6 @@ namespace Delegates
             return true;
         }
 
-        // check if a number is a Fibonacci number
         public static bool IsFibonacci(int number)
         {
             int a = 0, b = 1;

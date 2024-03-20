@@ -5,8 +5,8 @@
         static void Main()
         {
             int number1 = 10;
-            int number2 = 13;
-            int number3 = 17;
+            int number2 = 15;
+            int number3 = 19;
             int number4 = 21;
 
             Predicate<int> evenPredicate = new Predicate<int>(ArithmeticOperations.IsEven);
