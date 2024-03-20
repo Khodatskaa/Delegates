@@ -20,7 +20,7 @@ namespace Delegates
 
         public static void EventSubscription(MessageModule module)
         {
-            module.MessageDisplayed += HandleMessage;
+            module.MessageDisplayed += HandleMessage;  //module.MessageDisplayed += HandleMessage is used to subscribe to the event
         }
 
         public static void HandleMessage(string message)
