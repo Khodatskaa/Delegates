@@ -10,7 +10,7 @@ namespace Delegates
     {
         public static void DirectCall(MessageModule module, string message)
         {
-            module.DisplayMessage(message);
+            module.DisplayMessage(message);  //module.DisplayMessage uses the delegate to call the method
         }
 
         public static void DelegateCall(MessageDisplayDelegate displayDelegate, string message)
