@@ -15,7 +15,7 @@ namespace Delegates
         public void DisplayMessage(string message)
         {
             Console.WriteLine("Message displayed: " + message);
-            MessageDisplayed?.Invoke(message);     //.Invoke() - to call the delegate
+            MessageDisplayed?.Invoke(message);     //MessageDisplayed?.Invoke(message) is used to call the delegate
         }
     }
 }
