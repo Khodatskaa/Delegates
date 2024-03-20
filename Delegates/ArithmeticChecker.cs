@@ -8,7 +8,7 @@ namespace Delegates
 {
     public class ArithmeticChecker
     {
-        private Predicate<int> checkPredicate;
+        private Predicate<int> checkPredicate;  // private Predicate<int> checkPredicate is used to store the delegate that will be used to check the number.
 
         public ArithmeticChecker(ArithmeticOperation operation)
         {
