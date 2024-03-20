@@ -13,13 +13,7 @@ namespace Delegates
         public DateTime Validity { get; private set; }
         public string PIN { get; private set; }
         public decimal CreditLimit { get; private set; }
-        public decimal AvailableFunds { get; private set; }
-
-        public event EventHandler<decimal> RechargeEvent;
-        public event EventHandler<decimal> ExpenditureEvent;
-        public event EventHandler<decimal> CreditUtilizationEvent;
-        public event EventHandler<decimal> LimitReachedEvent;
-        public event EventHandler<string> PINChangedEvent;
+        public decimal AvailableFunds { get; private set; } = 0;
 
         public CreditCard(string cardNumber, string ownerName, DateTime validity, string pin, decimal creditLimit)
         {
@@ -28,8 +22,13 @@ namespace Delegates
             Validity = validity;
             PIN = pin;
             CreditLimit = creditLimit;
-            AvailableFunds = 0; 
         }
+
+        public event EventHandler<decimal> RechargeEvent;
+        public event EventHandler<decimal> ExpenditureEvent;
+        public event EventHandler<decimal> CreditUtilizationEvent;
+        public event EventHandler<decimal> LimitReachedEvent;
+        public event EventHandler<string> PINChangedEvent;
 
         public void Recharge(decimal amount)
         {
